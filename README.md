@@ -25,7 +25,7 @@ By Raj Nori. a planner app using Node, SQL and other packages.
 
 # Project Name
 
-> E-commerce backend
+> EParty planner App
 [![Generic badge](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://shields.io/)
 
 ## Description
