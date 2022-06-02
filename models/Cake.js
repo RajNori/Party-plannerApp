@@ -19,7 +19,7 @@ Cake.init(
       type: DataTypes.STRING,
     },
     image: {
-      type:DataTypes.BLOB,
+      type:DataTypes.STRING,
     },
     date_created: {
       type: DataTypes.DATE,
