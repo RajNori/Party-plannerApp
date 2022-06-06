@@ -7,6 +7,7 @@
   <title>Let's party</title>
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="/css/style.css">
   
 </head>
 
@@ -37,13 +38,13 @@
             </a>
     
             <div class="navbar-dropdown">
-              <a class="navbar-item">
+              <a class="navbar-item" href="/Cakes" >
                 Cakes
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" href="/Games">
                 Games
               </a>
-              <a class="navbar-item">
+              <a class="navbar-item" href="/Themes">
                 Themes
               </a>
             
@@ -54,12 +55,21 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
+              {{#if logged_in}}
+              <a class="button is-light" href="/Profile">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" href="/Logout">
+                Log in
+              </a>
+              {{else}}
               <a class="button is-primary" href="/Signup">
                 <strong>Sign up</strong>
               </a>
               <a class="button is-light" href="/Login">
                 Log in
               </a>
+              {{/if}}
             </div>
           </div>
         </div>
@@ -78,9 +88,17 @@
     </section>
 
   </header>
-  
+
+  <main>
+    {{{ body }}}
+  </main>  
 
 </body>
+
+
+{{#if logged_in}}
+<script src = "/js/logout.js"></script>
+{{/if}}
 
 
 <script src="https://kit.fontawesome.com/f0e7f0fe89.js" crossorigin="anonymous"></script>

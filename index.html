@@ -12,7 +12,6 @@
 
 <body>
   <header>
-
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <a class="navbar-item" href="/">
@@ -55,35 +54,113 @@
         <div class="navbar-end">
           <div class="navbar-item">
             <div class="buttons">
+              <!-- {{#if logged_in}} -->
+              <a class="button is-light" href="/Profile">
+                <strong>Sign up</strong>
+              </a>
+              <a class="button is-light" href="/Logout">
+                Log in
+              </a>
+              <!-- {{else}} -->
               <a class="button is-primary" href="/Signup">
                 <strong>Sign up</strong>
               </a>
               <a class="button is-light" href="/Login">
                 Log in
               </a>
+              <!-- {{/if}} -->
             </div>
           </div>
         </div>
       </div>
     </nav>
+
     <section class="hero is-link">
-  <div class="hero-body">
-    <p class="title">
-      <i class="fa-solid fa-balloons"></i>
-      <a href="/">Let's Party!</a>
-    </p>
-    <p class="subtitle">
-      A party planning blog
-    </p>
-  </div>
-</section>
-
-
+      <div class="hero-body">
+        <p class="title">
+          <a href="/">Let's Party!</a>
+        </p>
+        <p class="subtitle">
+          A party planning blog
+        </p>
+      </div>
+    </section>
 
   </header>
-  
+
+  <main>
+    
+<div class="block">
+
+
+  <div class="columns">
+  <div class="column">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="public/images/Rainbow-cake-1.png" alt="Cake image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Cakes</p>
+            <p class="subtitle is-6">Choose to view more cakes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="public/images/pinata-hanging.jpeg" alt="Game image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Games</p>
+            <p class="subtitle is-6">Choose to view more games</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+      <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="public/images/minion-theme.jpeg" alt="Party-Theme-image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">Themes</p>
+            <p class="subtitle is-6">Choose to view more Themes</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+</div>
+
+  </main>  
 
 </body>
+
+
+<!-- {{#if logged_in}}
+<script src = "/js/logout.js"></script>
+{{/if}} -->
 
 
 <script src="https://kit.fontawesome.com/f0e7f0fe89.js" crossorigin="anonymous"></script>
