@@ -7,21 +7,38 @@ const router = require('express').Router();
 // const { append } = require('express/lib/response');
 
 
-// router
-// .route('/cakes')
-// .get((req, res)=>{
-//     res.sendFile(path.join(_dirname,'views/cakes.handlebars'))
-// })
-// .post ((req, res)=>{
+router.get('/', async (req, res) => {
+    //serializes all of the cakes objects that it receives. 
+     try { 
+       const cakesData = await Cake.findAll();
+       const serializedData = cakesData.map(cake => cake.get({ plain: true }));
    
-// })
-// router
-// .route('/cakes/:cakeid')
-// .get((req, res)=>{
-//     res.send()  
-// })
-// post((req, res)=>{
-    
-// });
-
-module.exports = router
+       console.log(cakesData)
+       console.loc(serializedData)
+   
+       res.render('all', cakesData)
+   
+     }
+   
+     catch (err){
+     res.status(500).json(err)
+   
+     }
+   });
+   
+   // route to get one cake
+   router.get('/Gakes/:id', async (req, res) => {
+     try{ 
+         const cakesData = await Cake.findByPk(req.params.id);
+         if(!cakesData) {
+             res.status(404).json({message: 'No cakes with this id!'});
+             return;
+         }
+         const cake = cakesData.get({ plain: true });
+         res.render('cake', cake);
+       } catch (err) {
+           res.status(500).json(err);
+       };     
+   });
+   
+   module.exports = router;
