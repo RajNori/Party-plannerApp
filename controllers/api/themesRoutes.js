@@ -19,8 +19,8 @@ router
 .get((req, res)=>{
     
 })
-post((req, res)=>{
+// post((req, res)=>{
     
-})
+// })
 
 module.exports = router
