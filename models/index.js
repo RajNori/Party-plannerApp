@@ -12,6 +12,10 @@ User.hasMany(Cake, {
   foreignKey: 'user_id'
 });
 
+Cake.belongsTo(User, {
+  foreignKey: 'user_id'
+})
+
 User.hasMany(Theme, {
   foreignKey: 'user_id'
 });

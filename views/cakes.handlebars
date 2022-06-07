@@ -4,20 +4,21 @@
     <h3>
       Cakes
     </h3>
+    
     {{#each cakes as |cake|}}
       <div class="card">
         <div class="card-image">
           <figure class="image is-4by3">
-            <a href="/Cakes">
-              <img src="public/images/{{cakes.[0].filename}}" alt="{{cakes.[0].name}}">
+            <a href="/Cakes/{{cake.id}}">
+              <img src="/images/{{cake.image}}" alt="{{cake.name}}">
             </a>
           </figure>
         </div>
         <div class="card-content">
           <div class="media">
             <div class="media-content">
-              <p class="title is-4">Cakes</p>
-              <p class="subtitle is-6">{{cake.descrition}}</p>
+              <p class="title is-4">{{cake.name}}</p>
+              <p class="subtitle is-6">{{cake.description}}</p>
             </div>
           </div>
         </div>
@@ -30,11 +31,11 @@
 <div>
   <form>
     <div>
-      <label for="cake-name">Cake cake:</label>
+      <label for="cake-name">Cake name:</label>
       <input class="input" id="cake-name" type="text" placeholder="Title">
     </div>
     <div>
-      <label for="cake-description"></label>
+      <label for="cake-description">Cake description</label>
       <textarea class="textarea" id="cake-description" placeholder="Description"></textarea>
     </div>
     <div>

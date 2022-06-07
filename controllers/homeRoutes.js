@@ -6,9 +6,10 @@ router.get('/', async(req, res) => {
   res.render('homepage');
 });
 
-router.get('/cakes', async (req, res) => {
+router.get('/Cakes', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
+    console.log('in cakes get')
     const cakeData = await Cake.findAll({
       include: [
         {
@@ -17,13 +18,14 @@ router.get('/cakes', async (req, res) => {
         },
       ],
     });
-
+    console.log(cakeData)
     // Serialize data so the template can read it
     const cakes = cakeData.map((cake) => cake.get({ plain: true }));
+    console.log(cakes)
 
     // Pass serialized data and session flag into template
-    res.render('allcakes', { 
-      ...cakes, 
+    res.render('cakes', { 
+      cakes, 
       // logged_in: req.session.logged_in 
     });
   } catch (err) {

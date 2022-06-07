@@ -2,56 +2,56 @@
   {
     "name": "Elsa's castle",
     "description": "Cake make in the image of Elsa",
-    "image": "public/images/Elsa-cake.png"
+    "image": "Elsa-cake.png"
   },
   {
     "name": "Princesses",
     "description": "Cake with Disney Princesses",
-    "image": "public/images/Princesses-1.png"
+    "image": "Princesses-1.png"
   },
   {
     "name": "Lego",
     "description": "Cake make in the image of Lego Pieces",
-    "image": "public/images/Lego-cake-2.png"
+    "image": "Lego-cake-2.png"
   },
   {
     "name": "Galaxy",
     "description": "Cake make in the image of the galaxy",
-    "image": "public/images/galaxy-cake.png"
+    "image": "galaxy-cake.png"
   },
   {
     "name": "Tiger",
     "description": "Cake make in the image of a Tiger",
-    "image": "public/images/Tiger-cake.png"
+    "image": "Tiger-cake.png"
   },
   {
     "name": "Sloth",
     "description": "Cake make in the image of a Sloth",
-    "image": "public/images/Science-cake-2.png"
+    "image": "Science-cake-2.png"
   },
   {
     "name": "Ladybird cake",
     "description": "Cake in the shape of a ladybird",
-    "image": "public/images/Ladybird-cake.png"
+    "image": "Ladybird-cake.png"
   },
   {
     "name": "Science cake",
     "description": "Cake made to look like a science experiment",
-    "image": "public/images/Science-cake-1.png"
+    "image": "Science-cake-1.png"
   },
   {
     "name": "Science equipment",
     "description": "Cake with fondent made science equipment",
-    "image": "public/images/Science-cake-2.png"
+    "image": "Science-cake-2.png"
   },
   {
     "name": "Rainbow",
     "description": "Cake where layers are the colours of the rainbow",
-    "image": "public/images/Rainbow-cake-1.png"
+    "image": "Rainbow-cake-1.png"
   },
   {
     "name": "Rainbow decoration",
     "description": "Cake with Rainbow decoration on top",
-    "image": "public/images/Rainbow-cake-2.png"
+    "image": "Rainbow-cake-2.png"
   }
 ]
