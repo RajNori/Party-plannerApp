@@ -33,13 +33,6 @@ Cake.init(
         key: 'id',
       },
     },
-    theme_id:{
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'theme',
-          key: 'id',
-        },
-    },
     comment_id: {
         type: DataTypes.INTEGER,
         references: {

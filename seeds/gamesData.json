@@ -1,7 +1,7 @@
 [
     {
         "name": "Pin the Tail on the Donkey.",
-        "description": "Choose whatever themed creature you like for this one. Print out a picture of the said creature or character with out a main feature. The kid whose turn it is, attempts to stick it to the picture, whilst blindfolded. The closest is the winner!",
+        "description": "Choose whatever themed creature you like for this one. Print out a picture of the said creature or character with out a main feature. The kid whose turn it is, attempts to stick it to the picture, whilst blindfolded. The closest is the winner!"
     },
     {
         "name": "Piñata",
@@ -39,4 +39,4 @@
         "name": "Duck, Duck, Goose",
         "description":"Have the kids sit in a circle. Whoever starts, taps each kid on the head whilst saying DUCK. When the say GOOSE, whoever was tapped on the head must jump up and try to catch them before the tapper runs around the full circle."
     }
-];
+]

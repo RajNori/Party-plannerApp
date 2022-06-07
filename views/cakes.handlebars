@@ -1,0 +1,45 @@
+
+{{#if cakes.length}}
+  <div>
+    <h3>
+      Cakes
+    </h3>
+    {{#each cakes as |cake|}}
+      <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by3">
+            <a href="/Cakes">
+              <img src="public/images/{{cakes.[0].filename}}" alt="{{cakes.[0].name}}">
+            </a>
+          </figure>
+        </div>
+        <div class="card-content">
+          <div class="media">
+            <div class="media-content">
+              <p class="title is-4">Cakes</p>
+              <p class="subtitle is-6">{{cake.descrition}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+  
+{{/if}}
+<div>
+  <form>
+    <div>
+      <label for="cake-name">Cake cake:</label>
+      <input class="input" id="cake-name" type="text" placeholder="Title">
+    </div>
+    <div>
+      <label for="cake-description"></label>
+      <textarea class="textarea" id="cake-description" placeholder="Description"></textarea>
+    </div>
+    <div>
+      <button type="submit" class="button is-link">Submit</button>
+    </div>
+  </form>
+  
+</div>
