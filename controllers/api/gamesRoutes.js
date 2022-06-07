@@ -35,7 +35,7 @@ router.get('/', async (req, res) => {
             res.status(404).json({message: 'No games with this id!'});
             return;
         }
-        const game = dishData.get({ plain: true });
+        const game = gamesData.get({ plain: true });
         res.render('game', game);
       } catch (err) {
           res.status(500).json(err);
