@@ -1,13 +1,13 @@
 async function newFormHandler(event) {
   event.preventDefault();
-  const description = document.querySelector('#cake-description').value;
-  const name = document.querySelector('#cake-name').value;
+  const comment = document.querySelector('#cake-comment').value;
+  const name = document.querySelector('#comment-name').value;
 
   const response = await fetch('/api/cakes', {
     method: 'POST',
     body: JSON.stringify({
       name,
-      description,
+      comment,
     }),
     headers: {
       'Content-Type': 'application/json',

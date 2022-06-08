@@ -1,12 +1,12 @@
-
-{{#if cakes.length}}
-  <div>
+<div class="columns">
+  {{#if cakes.length}}
+  <div class="column">
     <h3>
       Cakes
     </h3>
     
     {{#each cakes as |cake|}}
-      <div class="card">
+      <div class="card margin-bottom">
         <div class="card-image">
           <figure class="image is-4by3">
             <a href="/Cakes/{{cake.id}}">
@@ -27,24 +27,31 @@
 
   </div>
   
-{{/if}}
-<div>
-  <form class="form new-cake-form">
-    <div>
-      <label for="cake-name">Cake name:</label>
-      <input class="input" id="cake-name" type="text" placeholder="Title">
-    </div>
-    <div>
-      <label for="cake-description">Cake description</label>
-      <textarea class="textarea" id="cake-description" placeholder="Description"></textarea>
-    </div>
-    <div>
-      <label for="file-name">f:</label>
-      <input class="input" id="image" type="text" placeholder="Title">
-    </div>
-    <div>
-      <button type="submit" class="button is-link">Submit</button>
-    </div>
-  </form>
-  
+  {{/if}}
+  <div class="column">
+    <h3>
+      Suggest a new cake idea
+    </h3>
+    <form class="form new-cake-form">
+      <div>
+        <label for="cake-name">Cake name:</label>
+        <input class="input" id="cake-name" type="text" placeholder="Title">
+      </div>
+      <div>
+        <label for="cake-description">Cake description</label>
+        <textarea class="textarea" id="cake-description" placeholder="Description"></textarea>
+      </div>
+      {{!-- <div>
+        <label for="file-name">:</label>
+        <input class="input" id="image" type="text" placeholder="Title">
+      </div> --}}
+      <div>
+        <button type="submit" class="button is-link">Submit</button>
+      </div>
+    </form>
+    
+  </div>
+
 </div>
+
+<script src="./js/cake.js"></script>

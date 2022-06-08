@@ -1,40 +1,41 @@
 {{!-- <div class = "columns is half"> --}}
-
-<section class="column is-half">
-  <div class="card">
-        <div class="card-image">
-          <figure class="image is-4by3">
-          
-            <img src="/images/{{image}}" alt="{{name}}">
-          
-          </figure>
-        </div>
-          <div class="card-content">
-            <div class="media">
-              <div class="media-content">
-                <p class="title is-4">{{name}}</p>
-                <p class="subtitle is-6">{{description}}</p>
-                <p class="subtitle is-6">Created by {{user.name}}</p>
+<div class="columns">
+  <div class="column">
+    <div class="card">
+          <div class="card-image">
+            <figure class="image is-4by3">
+            
+              <img src="/images/{{image}}" alt="{{name}}">
+            
+            </figure>
+          </div>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <p class="title is-4">{{name}}</p>
+                  <p class="subtitle is-6">{{description}}</p>
+                  <p class="subtitle is-6">Created by {{user.name}}</p>
+                </div>
               </div>
             </div>
-          </div>
-      </div>
-</section>
-<section class="column is-half">
-  
-  <div>
-    <form>
-      <div>
-      <label for="user-name">Name:</label>
-      <input class="input" id="cake-name" type="text" placeholder="Title">
-    </div>
-    <div>
-      <label for="cake-comment">Cake comment</label>
-      <textarea class="textarea" id="cake-comment" placeholder="Comment"></textarea>
-    </div>
-    <div>
-      <button type="submit" class="button is-link">Submit</button>
-    </div>
-    </form>
+        </div>
   </div>
-</section>
+  <div class="column">
+    
+    <div>
+      <form>
+        <div>
+        <label for="user-name">Name:</label>
+        <input class="input" id="comment-name" type="text" placeholder="name">
+      </div>
+      <div>
+        <label for="cake-comment">Comment:</label>
+        <textarea class="textarea" id="cake-comment" placeholder="comment"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="button is-link">Submit</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
