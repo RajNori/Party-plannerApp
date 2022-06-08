@@ -8,6 +8,13 @@ header {
   margin-bottom: 50px;
 }
 
+.card {
+  max-width: 300px;
+  max-height: 700px;
+  margin-left: 50px;
+
+}
+
 form {
   background-color: cornflowerblue;
   margin:auto;

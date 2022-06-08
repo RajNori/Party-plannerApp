@@ -4,26 +4,28 @@
     <h3>
       Cakes
     </h3>
-    
-    {{#each cakes as |cake|}}
-      <div class="card margin-bottom">
-        <div class="card-image">
-          <figure class="image is-4by3">
-            <a href="/Cakes/{{cake.id}}">
-              <img src="/images/{{cake.image}}" alt="{{cake.name}}">
-            </a>
-          </figure>
-        </div>
-        <div class="card-content">
-          <div class="media">
-            <div class="media-content">
-              <p class="title is-4">{{cake.name}}</p>
-              <p class="subtitle is-6">{{cake.description}}</p>
+    <div>
+      {{#each cakes as |cake|}}
+        <div class="card margin-bottom">
+          <div class="card-image">
+            <figure class="image is-4by3">
+              <a href="/Cakes/{{cake.id}}">
+                <img src="/images/{{cake.image}}" alt="{{cake.name}}">
+              </a>
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{cake.name}}</p>
+                <p class="subtitle is-6">{{cake.description}}</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
+    
 
   </div>
   
