@@ -1,27 +1,19 @@
-
-const { Cake } = require('../../models');
 const router = require('express').Router();
-// const express = require('express');
-// const path = require('path');
-// const app = express();
-// const { append } = require('express/lib/response');
+const { Cake } = require('../../models');
+const withAuth = require('../../utils/auth');
+
+router.post('/', withAuth, async (req, res) => {
+  try {
+    const newCake = await Cake.create({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(newCake);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
 
 
-// router
-// .route('/cakes')
-// .get((req, res)=>{
-//     res.sendFile(path.join(_dirname,'views/cakes.handlebars'))
-// })
-// .post ((req, res)=>{
-   
-// })
-// router
-// .route('/cakes/:cakeid')
-// .get((req, res)=>{
-//     res.send()  
-// })
-// post((req, res)=>{
-    
-// });
-
-module.exports = router
+module.exports = router;
