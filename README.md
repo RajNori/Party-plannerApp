@@ -2,7 +2,7 @@
 # PARTY PLANNER APP
 A party planner app to plan and organise parties and share ideas
 
-By Raj Nori. a planner app using Node, SQL and other packages.
+By Kylie gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL and other packages.
 
 
 ## Table of Contents
@@ -71,7 +71,7 @@ The project uses Node and Sequelize npm packages- please initialise them before 
 
 
 ## Usage
-Use it to configure your e-commerce backend applications 
+
 
 
 ## Project Status
