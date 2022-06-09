@@ -58,6 +58,8 @@ router.get('/Cakes/:id', withAuth, async (req, res) => {
 
 
 
+
+
 router.get('/Games', async (req, res) => {
   try {
     // Get all games and JOIN with user data
