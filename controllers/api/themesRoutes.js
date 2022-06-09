@@ -1,5 +1,5 @@
 const express = require('express');
-const { Theme } = require('../../models/Theme');
+const { Theme } = require('../../models');
 const app = express();
 let router = require('express').Router();
 const { append } = require('express/lib/response');

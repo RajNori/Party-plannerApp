@@ -1,9 +1,8 @@
 const express = require('express');
-const { Game } = require('../../models/Game');
+const { Game } = require('../../models');
 const app = express();
-const path = require('path');
 let router = require('express').Router();
-const { append } = require('express/lib/response');
+
 
 app.use(express.static('public'));
 
