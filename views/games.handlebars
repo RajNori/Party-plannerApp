@@ -1,0 +1,49 @@
+<div class="rows">
+  {{#if games.length}}
+  <div class="row">
+    <h3>
+      Games
+    </h3>
+    <div>
+      {{#each games as |game|}}
+        <div class="card margin-bottom">
+          <div class="card-image">
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{game.name}}</p>
+                <p class="subtitle is-6">{{game.description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+    </div>
+     {{/if}}
+  
+  <div class="column">
+    <h3>
+      Suggest a new game idea
+    </h3>
+    <form class="form new-game-form">
+      <div>
+        <label for="game-name">Game name:</label>
+        <input class="input" id="game-name" type="text" placeholder="Title">
+      </div>
+      <div>
+        <label for="game-description">Game description</label>
+        <textarea class="textarea" id="game-description" placeholder="Description"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="button is-link">Submit</button>
+      </div>
+    </form>
+    
+  </div>
+
+</div>
+
+<script src="./js/game.js"></script>
+
