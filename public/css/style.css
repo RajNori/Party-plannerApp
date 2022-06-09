@@ -41,3 +41,9 @@ button {
     justify-content: center;
     text-align: center;
 }
+
+.comment {
+  background-color:lightgray;
+  padding: 2%;
+  border-radius: 1;
+}

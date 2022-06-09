@@ -44,9 +44,12 @@
       <h3>Comments:</h3>
 
       {{#each comments as |comment|}}
-      <div class="row mb-2">
-        <div class="col-md-8">
-          <h4>{{comment.comment}}</h4>
+      <div class='comment'>
+        <div>
+          <p>
+            {{comment.comment}}
+          </p>
+          
         </div>
         <div>
           <p>comment by {{comment.name}}</p>
@@ -59,4 +62,4 @@
 
 </div>
 
-<script src="./js/cake_comment.js"></script>
+<script src="/js/cake_comment.js"></script>

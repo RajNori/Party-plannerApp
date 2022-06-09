@@ -9,7 +9,7 @@ router.get('/', async(req, res) => {
 router.get('/Cakes', withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    console.log('in cakes get')
+   
     const cakeData = await Cake.findAll({
       include: [
         {
@@ -18,7 +18,7 @@ router.get('/Cakes', withAuth, async (req, res) => {
         },
       ],
     });
-    console.log(cakeData)
+    
     // Serialize data so the template can read it
     const cakes = cakeData.map((cake) => cake.get({ plain: true }));
     console.log(cakes)
@@ -61,7 +61,7 @@ router.get('/Cakes/:id', withAuth, async (req, res) => {
 router.get('/Games', async (req, res) => {
   try {
     // Get all games and JOIN with user data
-    console.log('in cakes get')
+    // console.log('in cakes get')
     const gameData = await Game.findAll({
       include: [
         {
@@ -88,7 +88,7 @@ router.get('/Games', async (req, res) => {
 router.get('/Themes', async (req, res) => {
   try {
     // Get all projects and JOIN with user data
-    console.log('in games get')
+    // console.log('in games get')
     const themeData = await Theme.findAll({
       include: [
         {

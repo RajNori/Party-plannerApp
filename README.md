@@ -1,6 +1,6 @@
 
-# PARTY PLANNER APP
-A party planner app to plan and organise parties and share ideas
+# LET'S PARTY: A PARTY PLANNER APP
+A party planner app that allows users to view party ideas to help them plan parties and share their own ideas.
 
 By Kylie gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL and other packages.
 
@@ -8,9 +8,6 @@ By Kylie gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL an
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Screenshots](#screenshots)
-* [Video](#Video-walkthrough)
 * [Setup](#setup)
 * [Usage](#usage)
 * [Project Status](#project-status)
@@ -22,22 +19,22 @@ By Kylie gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL an
 
 ## General Information
 
+This app allows users to login in to view party cake, game and theme party options.  It then this the user the ability to add a new cake option and make comments about cakes that are displayed.
 
 # Project Name
 
-> EParty planner App
+> Let's Party: A Party planner App
 [![Generic badge](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://shields.io/)
 
 ## Description
 
+This app uses 
 
 ## License
 This application is covered under the MIT License.
 
 ## User Story
 
-
-```
 
 ## Acceptance Criteria
 
@@ -47,31 +44,24 @@ This application is covered under the MIT License.
 
 
 ## Technologies Used
+- bcrypt to secure passwords
+- bulma (css framework)
+- handlebars
 - MySQL
 - Node.js - version 17.9.0
 - Sequelize ORM
 - JavaScript - ES6
 
 
-
-## Features
-List the ready features here:
-
-
-
-
-## Screenshots
-
-## Video
-Please clink on the link below for the walkthrough video...<br />
-
-
 ## Setup
-The project uses Node and Sequelize npm packages- please initialise them before running the app.
+
+The project uses Node and Sequelize npm packages- please initialise them before running the app using 
+1. create database in mysql using 'source db/schema.sql
+2. Load seed data by running node seeds/seed.js
+3. 'npm install' to install packages
 
 
 ## Usage
-
 
 
 ## Project Status
@@ -80,7 +70,7 @@ Project is: _complete
 ## Room for Improvement
 
 Room for improvement:
-- Can have additional features 
+- Can imput pictures when adding a cake option
 
 To do:
 - 
