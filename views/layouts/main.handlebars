@@ -19,12 +19,11 @@
           <img src="./images/balloon.jpeg" width="30" height="120">
         </a>
     
-        {{!-- <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true">Home</span>
-          <span aria-hidden="true">Cake</span>
-          <span aria-hidden="true">Games</span>
-          <span aria-hidden="true">Themes</span>
-        </a> --}}
+        <a role="button" class="navbar-burger" id ="burger" data-target="navbarBasicExample">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
       </div>
     
       <div id="navbarBasicExample" class="navbar-menu">
@@ -57,17 +56,17 @@
           <div class="navbar-item">
             <div class="buttons">
               {{#if logged_in}}
-              <a class="button is-light" href="/Profile">
+              {{!-- <a class="button is-light" href="/profile">
                 <strong>Profile</strong>
-              </a>
-              <a class="button is-light" href="/Logout">
+              </a> --}}
+              <a class="button is-light" id="logout">
                 Log out
               </a>
               {{else}}
-              <a class="button is-primary" href="/Signup">
+              <a class="button is-primary" href="/signup">
                 <strong>Sign up</strong>
               </a>
-              <a class="button is-light" href="/Login">
+              <a class="button is-light" href="/login">
                 Log in
               </a>
               {{/if}}
@@ -94,13 +93,15 @@
     {{{ body }}}
   </main>  
 
+  {{#if logged_in}}
+  <script src = "./js/logout.js"></script>
+  {{/if}}
+
+  <script src = "./js/main.js"></script>
+
+  <script src="https://kit.fontawesome.com/f0e7f0fe89.js" crossorigin="anonymous"></script>
 </body>
 
 
-{{#if logged_in}}
-<script src = "/js/logout.js"></script>
-{{/if}}
 
-
-<script src="https://kit.fontawesome.com/f0e7f0fe89.js" crossorigin="anonymous"></script>
 </html>

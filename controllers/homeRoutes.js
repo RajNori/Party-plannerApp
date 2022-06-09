@@ -1,12 +1,12 @@
 const router = require('express').Router();
 const { Cake, Game, User, Theme } = require('../models');
-//const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 router.get('/', async(req, res) => {
   res.render('homepage');
 });
 
-router.get('/Cakes', async (req, res) => {
+router.get('/Cakes', withAuth, async (req, res) => {
   try {
     // Get all projects and JOIN with user data
     console.log('in cakes get')
@@ -33,7 +33,7 @@ router.get('/Cakes', async (req, res) => {
   }
 });
 
-router.get('/Cakes/:id', async (req, res) => {
+router.get('/Cakes/:id', withAuth, async (req, res) => {
   try {
     const cakeData = await Cake.findByPk(req.params.id, {
       include: [

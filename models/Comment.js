@@ -30,6 +30,13 @@ Comment.init(
         key: 'id',
       },
     },
+    cake_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'cake',
+        key: 'id',
+      }
+    }
   },
   {
     sequelize,

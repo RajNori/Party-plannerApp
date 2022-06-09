@@ -1,13 +1,18 @@
 async function newFormHandler(event) {
   event.preventDefault();
   const comment = document.querySelector('#cake-comment').value;
-  const name = document.querySelector('#comment-name').value;
+  const name = document.querySelector('#comment_name').value;
 
-  const response = await fetch('/api/cakes', {
+  const currentLocation = window.location.pathname;
+
+  const cakeId = currentLocation.split('/').slice(-1)[0];
+
+  const response = await fetch('/api/comments', {
     method: 'POST',
     body: JSON.stringify({
       name,
       comment,
+      cakeId,
     }),
     headers: {
       'Content-Type': 'application/json',
@@ -15,10 +20,11 @@ async function newFormHandler(event) {
   });
 
   if (response.ok) {
-    document.location.reload('/cakes');
+    document.location.reload();
   } else {
-    alert('Failed to add cake');
+    alert('Failed to add comment');
   }
 }
 
-document.querySelector('.new-cake-form').addEventListener('submit', newFormHandler);
+document.querySelector('.cake-comment-form').addEventListener('submit', newFormHandler);
+

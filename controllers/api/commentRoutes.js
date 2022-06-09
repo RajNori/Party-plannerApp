@@ -1,21 +1,22 @@
-const { Comment } = require('../../models/Comment');
-const express = require('express');
-const path = require('path');
-const app = express();
-let router = require('express').Router();
-const { append } = require('express/lib/response');
+const router = require('express').Router();
+const { Comment } = require('../../models');
+const withAuth = require('../../utils/auth');
 
-app.use(express.static('views'));
+router.post('/', withAuth, async (req, res) => {
+  try {
+    // console.log('req body', req.body);
+    const newComment = await Comment.create({
+      ...req.body,
+      user_id: req.session.user_id,
+      cake_id: req.body.cakeId
+    });
 
-router
-.route('/comment')
-.get((req, res)=>{
-   
-    res.render('comment')
-})
-.post ((req, res)=>{
-    
-})
+    res.status(200).json(newComment);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+
 
 
 module.exports = router
