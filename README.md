@@ -2,7 +2,7 @@
 # LET'S PARTY: A PARTY PLANNER APP
 A party planner app that allows users to view party ideas to help them plan parties and share their own ideas.
 
-By Kylie gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL and other packages.
+By Kylie Gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL and other packages.
 
 
 ## Table of Contents
