@@ -1,13 +1,12 @@
-const { User } = require('../../models');
+const { User } = require('../models/User')
+
 
 const createUser = async (req, res) => {
   try {
     const userData = await User.create(req.body);
-
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
-
       res.status(200).json(userData);
     });
   } catch (err) {
@@ -31,17 +30,14 @@ const userSignup = async (req, res) => {
 const userLogin = async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
-
-    if (!userData) {
+      if (!userData) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
-      return;
+        return;
     }
-
-    const validPassword = await userData.checkPassword(req.body.password);
-
-    if (!validPassword) {
+      const validPassword = await userData.checkPassword(req.body.password);
+      if (!validPassword) {
       res
         .status(400)
         .json({ message: 'Incorrect email or password, please try again' });
@@ -67,9 +63,23 @@ const userLogout = (req, res) => {
   }
 };
 
+const getSignup = (req, res) => {
+  res.render('signup');
+};
+
+const getLogin = (req, res) => {
+  if (req.session.logged_in) {
+    res.redirect('/Cakes');
+    return;
+  }
+  res.render('login');
+};
+
 module.exports = {
   createUser,
   userSignup,
   userLogin,
   userLogout,
+  getSignup,
+  getLogin
 };

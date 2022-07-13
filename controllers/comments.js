@@ -1,4 +1,4 @@
-const { Comment } = require('../../models');
+const { Comment } = require('../models/Comment')
 
 //create a comment
 const createComment = async (req, res) => {
@@ -16,5 +16,5 @@ res.status(200).json(newComment);
 
 
 module.exports = {
-  createComment,
+  createComment
 };

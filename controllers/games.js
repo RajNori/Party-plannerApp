@@ -1,4 +1,4 @@
-const { Game } = require('../../models');
+const { Game } = require('../models/Game')
 
 const serializeData = async (req, res) => {
   //serializes all of the games objects that it receives.
@@ -26,7 +26,29 @@ const getOneGame = async (req, res) => {
   }
 };
 
+const getGames = async (req, res) => {
+  try {
+    const gameData = await Game.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+      ],
+    });
+    const games = gameData.map((game) => game.get({ plain: true }));
+    res.render('games', {
+      games,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+};
+
+
+
 module.exports = {
  serializeData,
- getOneGame
+ getOneGame,
+ getGames,
 };
