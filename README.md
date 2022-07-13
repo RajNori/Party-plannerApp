@@ -27,8 +27,19 @@ This app allows users to login in to view party cake, game and theme party optio
 [![Generic badge](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://shields.io/)
 
 ## Description
+## Usage
+This app uses the following technologies
+> HTML
+> CSS
+> Javascript
+> Node
+> MySql
+> Sequelize ORM
+> Express
+> Handlebars
+> Bcrypt
+> Express-session middleware
 
-This app uses 
 
 ## License
 This application is covered under the MIT License.
@@ -88,7 +99,6 @@ Room for improvement:
 
 ## Acknowledgements
 - This project was inspired by...Monash Bootcamp
-
 
 
 ## Contact
