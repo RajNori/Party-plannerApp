@@ -10,6 +10,7 @@ By Kylie Gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL an
 * [Technologies Used](#technologies-used)
 * [Setup](#setup)
 * [Usage](#usage)
+* [Screenshot](#Screenshots)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -23,7 +24,8 @@ This app allows users to login in to view party cake, game and theme party optio
 
 # Project Name
 
-> Let's Party: A Party planner App
+> Let's Party: A Party planner App. 
+
 [![Generic badge](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://shields.io/)
 
 ## Description
@@ -40,14 +42,17 @@ This app uses the following technologies
 > Bcrypt
 > Express-session middleware
 
+## Screenshot
+
+![App](https://user-images.githubusercontent.com/98436665/178856478-3e6c75d3-ed30-4c1d-b548-68afbca13e19.png)
 
 ## License
 This application is covered under the MIT License.
 
 ## User Story
-> As a *parent*, I want to plan my childrens party so that I can choose the most suitable options for kids.
-> As a *user* I want to be able to create an account
-> As a child, I want to plan the best part for my friends so that I can be cool at school.
+> - As a *parent*, I want to plan my childrens party so that I can choose the most suitable options for kids.
+> - As a *user* I want to be able to create an account
+> - As a child, I want to plan the best part for my friends so that I can be cool at school.
 
 ## Acceptance Criteria
 
@@ -56,7 +61,7 @@ This application is covered under the MIT License.
 - It's done when the `login` form route renders a form to log in and a form to create a new account.
 - It's done when an existing user can enter their credentials on the login page to create a session on the server.
 - It's done when a new user can create an account on the login page and then be immediately logged in with a session.
-- It's done when the `/profile route renders the logged-in user's projects and a form to create a new project.
+- It's done when the `/profile` route renders the logged-in user's projects and a form to create a new project.
 - It's done when only a *logged in User* can visit the protected routes.
 - It's done when the *Cake* routes can be accessed by the logged in user.
 - It's done when the *Game* routes can be accessed by the logged in user.
