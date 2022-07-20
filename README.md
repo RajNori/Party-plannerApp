@@ -11,6 +11,7 @@ By Kylie Gilbert, Peter O'Callaghan & Raj Nori. a planner app using Node, SQL an
 * [Setup](#setup)
 * [Usage](#usage)
 * [Screenshot](#Screenshots)
+* [Video](#video)
 * [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Acknowledgements](#acknowledgements)
@@ -101,6 +102,11 @@ Room for improvement:
 - Can add more features as and when needed including OAuth and making the app ready for a wider audience.
 - Can create a mibile app for the same
 
+## Screenshots
+> [Screenshots](./images/parties.png)
+
+## walkthrough
+> [Video](https://www.youtube.com/watch?v=cEjafKFmGKg)
 
 ## Acknowledgements
 - This project was inspired by...Monash Bootcamp
