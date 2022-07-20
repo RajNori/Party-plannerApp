@@ -1,4 +1,4 @@
-const { Theme } = require('../models/Theme')
+const { Theme, User } = require('../models/Theme')
 
 const getThemes = async (req, res) => {
   try {

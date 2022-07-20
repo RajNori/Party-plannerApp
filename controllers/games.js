@@ -1,4 +1,4 @@
-const { Game } = require('../models/Game')
+const { Game,User } = require('../models/Game')
 
 const serializeData = async (req, res) => {
   //serializes all of the games objects that it receives.

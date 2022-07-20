@@ -1,4 +1,4 @@
-const { Cake } = require('../models/Cake')
+const { Cake,User } = require('../models/Cake');
 
 const createCake = async (req, res) => {
   try {
@@ -13,11 +13,11 @@ const createCake = async (req, res) => {
   }
 };
 
-//GET cakes by 
+//GET cakes by
 
 const getCakes = async (req, res) => {
   try {
-const cakeData = await Cake.findAll({
+    const cakeData = await Cake.findAll({
       include: [{ model: User, attributes: ['name'] }],
     });
     const cakes = cakeData.map((cake) => cake.get({ plain: true }));
@@ -41,7 +41,7 @@ const getSingleCake = async (req, res) => {
         },
       ],
     });
-const cake = cakeData.get({ plain: true });
+    const cake = cakeData.get({ plain: true });
     res.render('each_cake', {
       ...cake,
       logged_in: req.session.logged_in,
@@ -51,5 +51,4 @@ const cake = cakeData.get({ plain: true });
   }
 };
 
-
-module.exports = { createCake,getCakes,getSingleCake };
+module.exports = { createCake, getCakes, getSingleCake };
